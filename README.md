@@ -37,7 +37,7 @@ faculty-research-system/
 
 ---
 
-## 🚀 Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 - Python 3.10 or newer
@@ -65,8 +65,6 @@ python -m venv venv
 # Activate it
 # Windows:
 venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
 ```
 
 ---
@@ -88,7 +86,7 @@ cp .env.example .env
 
 Edit `.env`:
 ```
-MONGO_URI=mongodb://localhost:27017/      # Local MongoDB
+MONGO_URI=mongodb://localhost:27017/     
 # OR for Atlas:
 # MONGO_URI=mongodb+srv://<user>:<pass>@cluster.mongodb.net/
 SECRET_KEY=your_random_secret_key_here
@@ -100,12 +98,6 @@ SECRET_KEY=your_random_secret_key_here
 
 **Local MongoDB:**
 ```bash
-# macOS (Homebrew)
-brew services start mongodb-community
-
-# Ubuntu/Debian
-sudo systemctl start mongod
-
 # Windows — start from Services or:
 net start MongoDB
 ```
@@ -137,7 +129,7 @@ Open your browser and go to: **http://localhost:5000**
 
 ---
 
-## 🔐 Default Login
+## Default Login
 
 | Username | Password |
 |----------|----------|
@@ -147,7 +139,7 @@ Open your browser and go to: **http://localhost:5000**
 
 ---
 
-## 📡 API Reference
+## API Reference
 
 ### Authentication
 | Method | Endpoint | Description |
@@ -192,23 +184,7 @@ Open your browser and go to: **http://localhost:5000**
 
 ---
 
-## 📦 Pushing to GitHub
-
-```bash
-# Initialize git (if not cloned)
-git init
-git add .
-git commit -m "Initial commit: Faculty Research Management System"
-
-# Create repo on GitHub, then:
-git remote add origin https://github.com/YOUR_USERNAME/faculty-research-system.git
-git branch -M main
-git push -u origin main
-```
-
----
-
-## 🌐 MongoDB Atlas Setup (Cloud)
+## MongoDB Atlas Setup (Cloud)
 
 1. Go to [https://cloud.mongodb.com](https://cloud.mongodb.com) and create a free account
 2. Create a new **Cluster** (free M0 tier works fine)
@@ -219,7 +195,7 @@ git push -u origin main
 
 ---
 
-## 🔑 Key MongoDB Queries Used
+## Key MongoDB Queries Used
 
 ```python
 # Find faculty by department
@@ -244,7 +220,7 @@ collection.update_one({"faculty_id": "FAC101"}, {"$pull": {"publications": {"pub
 
 ---
 
-## ✅ Features Implemented
+## Features Implemented
 
 - [x] Admin login / session management
 - [x] Dashboard with live stats & charts
@@ -261,6 +237,6 @@ collection.update_one({"faculty_id": "FAC101"}, {"$pull": {"publications": {"pub
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Built as a NoSQL database project using Flask + MongoDB.
