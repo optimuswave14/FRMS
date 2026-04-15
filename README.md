@@ -1,10 +1,10 @@
-# 🎓 Faculty Research Management System (FRMS)
+# Faculty Research Management System
 
-A full-stack web application for managing faculty research profiles, publications, projects, and patents — built with **Flask**, **MongoDB**, and vanilla **HTML/CSS/JS**.
+A full stack web application for managing faculty research profiles, publications, projects, and patents built with Flask, MongoDB, and HTML/CSS/JS
 
 ---
 
-## 📁 Project Structure
+## Project structure
 
 ```
 faculty-research-system/
@@ -25,38 +25,21 @@ faculty-research-system/
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Layer     | Technology           |
 |-----------|----------------------|
 | Backend   | Python 3.10+, Flask  |
 | Database  | MongoDB (NoSQL)      |
-| Frontend  | HTML5, CSS3, JS (ES6+) |
+| Frontend  | HTML5, CSS3, JS(ES6+) |
 | Charts    | Chart.js             |
 | DB Driver | pymongo              |
 
 ---
 
 ## Setup & Installation
-
-### Prerequisites
-- Python 3.10 or newer
-- MongoDB Community Server (local) **or** MongoDB Atlas (cloud)
-- pip
-- Git
-
 ---
-
-### Step 1 — Clone the Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/faculty-research-system.git
-cd faculty-research-system
-```
-
----
-
-### Step 2 — Set Up a Virtual Environment
+### 1. Set up a virtual environment
 
 ```bash
 # Create virtualenv
@@ -69,7 +52,7 @@ venv\Scripts\activate
 
 ---
 
-### Step 3 — Install Python Dependencies
+### 2. Install python dependencies
 
 ```bash
 pip install -r backend/requirements.txt
@@ -77,7 +60,7 @@ pip install -r backend/requirements.txt
 
 ---
 
-### Step 4 — Configure Environment Variables
+### 3. Configure environment variables
 
 ```bash
 # Copy the example file
@@ -94,7 +77,7 @@ SECRET_KEY=your_random_secret_key_here
 
 ---
 
-### Step 5 — Start MongoDB
+### 4. Start MongoDB
 
 **Local MongoDB:**
 ```bash
@@ -107,7 +90,7 @@ Update `MONGO_URI` in your `.env` with your Atlas connection string.
 
 ---
 
-### Step 6 — Seed Sample Data (Optional but Recommended)
+### 5. Seed sample data (Optional but recommended)
 
 ```bash
 cd backend
@@ -118,7 +101,7 @@ This inserts 4 sample faculty members and creates the default admin account.
 
 ---
 
-### Step 7 — Run the Application
+### 6. Run the application
 
 ```bash
 cd backend
@@ -135,7 +118,7 @@ Open your browser and go to: **http://localhost:5000**
 |----------|----------|
 | `admin`  | `admin123` |
 
-> ⚠️ Change the password in production by updating the `admins` collection in MongoDB.
+Change the password in production by updating the `admins` collection in MongoDB.
 
 ---
 
@@ -217,26 +200,3 @@ collection.update_one({"faculty_id": "FAC101"}, {"$push": {"publications": {...}
 # Remove embedded document
 collection.update_one({"faculty_id": "FAC101"}, {"$pull": {"publications": {"pub_id": "p1"}}})
 ```
-
----
-
-## Features Implemented
-
-- [x] Admin login / session management
-- [x] Dashboard with live stats & charts
-- [x] Add / Edit / Delete faculty
-- [x] Add / Delete publications, projects, patents
-- [x] Faculty profile page with embedded records
-- [x] Multi-field search & filter
-- [x] Top-cited faculty analytics
-- [x] Funding agency analysis
-- [x] Department distribution chart
-- [x] Data validation & error handling
-- [x] MongoDB indexing (faculty_id, department, research_interests)
-- [x] Responsive design
-
----
-
-## Author
-
-Built as a NoSQL database project using Flask + MongoDB.
