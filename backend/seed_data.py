@@ -16,7 +16,7 @@ faculty_col.create_index("faculty_id", unique=True)
 # Admin
 admin_col.delete_many({})
 admin_col.insert_one({"username": "admin", "password": "admin123", "name": "System Administrator"})
-print("✅ Admin seeded")
+print("Admin seeded")
 
 # Sample faculty
 faculty_col.delete_many({})
@@ -95,5 +95,5 @@ sample_faculty = [
 ]
 
 faculty_col.insert_many(sample_faculty)
-print(f"✅ {len(sample_faculty)} faculty members seeded successfully!")
+print(f"{len(sample_faculty)} faculty members seeded successfully!")
 print("\nLogin credentials: admin / admin123")
