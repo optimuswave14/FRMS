@@ -34,14 +34,13 @@
 <div id="appShell" class="app-shell hidden">
   <aside class="sidebar">
     <div class="sidebar-brand">
-      <span class="brand-icon">🎓</span>
       <span class="brand-text">FRMS</span>
     </div>
     <nav class="sidebar-nav">
-      <a class="nav-link active" onclick="navigate('dashboard')">📊 Dashboard</a>
-      <a class="nav-link" onclick="navigate('faculty')">👩‍🏫 Faculty</a>
-      <a class="nav-link" onclick="navigate('search')">🔍 Search</a>
-      <a class="nav-link" onclick="navigate('addFaculty')">➕ Add Faculty</a>
+      <a class="nav-link active" onclick="navigate('dashboard')"> Dashboard</a>
+      <a class="nav-link" onclick="navigate('faculty')"> Faculty</a>
+      <a class="nav-link" onclick="navigate('search')"> Search</a>
+      <a class="nav-link" onclick="navigate('addFaculty')"> Add Faculty</a>
     </nav>
     <div class="sidebar-footer">
       <span id="adminName">Admin</span>
@@ -56,10 +55,10 @@
     <section id="page-dashboard" class="page active">
       <div class="page-header"><h1>Dashboard</h1><p>System overview & analytics</p></div>
       <div class="stats-grid">
-        <div class="stat-card blue"><div class="stat-icon">👩‍🏫</div><div class="stat-info"><span id="statFaculty">—</span><label>Faculty</label></div></div>
-        <div class="stat-card green"><div class="stat-icon">📚</div><div class="stat-info"><span id="statPubs">—</span><label>Publications</label></div></div>
-        <div class="stat-card orange"><div class="stat-icon">💼</div><div class="stat-info"><span id="statProjects">—</span><label>Projects</label></div></div>
-        <div class="stat-card purple"><div class="stat-icon">🏆</div><div class="stat-info"><span id="statPatents">—</span><label>Patents</label></div></div>
+        <div class="stat-card blue"><div class="stat-info"><span id="statFaculty">—</span><label>Faculty</label></div></div>
+        <div class="stat-card green"><div class="stat-info"><span id="statPubs">—</span><label>Publications</label></div></div>
+        <div class="stat-card orange"><div class="stat-info"><span id="statProjects">—</span><label>Projects</label></div></div>
+        <div class="stat-card purple"><div class="stat-info"><span id="statPatents">—</span><label>Patents</label></div></div>
       </div>
       <div class="charts-grid">
         <div class="chart-card">
@@ -72,7 +71,7 @@
         </div>
       </div>
       <div class="section-card">
-        <h3>🏅 Top Cited Faculty</h3>
+        <h3> Top Cited Faculty</h3>
         <table class="data-table" id="topCitedTable">
           <thead><tr><th>#</th><th>Name</th><th>Department</th><th>Citations</th></tr></thead>
           <tbody></tbody>
@@ -231,7 +230,6 @@
 <!-- Confirm Delete Modal -->
 <div id="modalConfirm" class="modal-overlay">
   <div class="modal-card confirm-card">
-    <div class="confirm-icon">⚠️</div>
     <h3 id="confirmTitle">Delete Faculty?</h3>
     <p id="confirmMsg">This action cannot be undone.</p>
     <div class="confirm-actions">
